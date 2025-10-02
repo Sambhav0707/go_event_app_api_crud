@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS attendees(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    event_id INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users (id) DELETE ON CASCASE,
+    FOREIGN KEY (event_id) REFERENCES events (id) DELETE ON CASCASE,
+
+
+
+);
