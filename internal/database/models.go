@@ -8,11 +8,16 @@ type Models struct {
 	Attendees AttendeeModel
 }
 
-func NewModels( db *sql.DB) Models{
- return Models{
-	Users: UserModel{
-		db: db,
-	},
-	
- }
+func NewModels(db *sql.DB) Models {
+	return Models{
+		Users: UserModel{
+			db: db,
+		},
+		Events: EventModel{
+			Db: db,
+		},
+		Attendees: AttendeeModel{
+			db: db,
+		},
+	}
 }
